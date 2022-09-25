@@ -1,0 +1,145 @@
+.header {
+    position: relative;
+    padding-top: 25px;
+    width: 100%;
+    background-color: #000;
+    transition: all 1s;
+
+    &__main {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .menu-mobile {
+            display: none;
+            @include device(s) {
+                display: flex;
+                justify-content: center;
+                flex: 1;
+                
+                i {
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+        }
+
+        .menu-close {
+            display: none;
+            @include device(s) {
+                display: block;
+                position: absolute;
+                right: 130px;
+                top: 10px;
+
+                i {
+                    cursor: pointer;   
+                    color: rgb(93, 10, 29);                 
+                }
+            }
+        }
+
+        &__logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            @include device(s){
+                flex:4;
+                align-items: center;
+            }
+
+            a {
+                font-weight: 700;
+                color: #fff;
+                text-decoration: none;
+                @include type-1(24);
+            }
+
+            .subTitle {
+                display: block;
+                font-weight: 100;
+                margin-top: 5px;
+                text-align: center;
+                font-size: 15px;
+            }
+        }
+
+        &__wrapper {
+            @include device(s){
+                // // position: fixed;
+                // position: absolute;
+                // top: 50px;
+                // // left: 500px;
+                // left: 80px !important;
+                // width: 75%;
+                // transition: all 0.7s;
+
+                /* Menu Fixo */
+                position: fixed;
+                top: 0;
+                left: 605px;
+                width: 80%;
+                transition: all 0.7s;
+                height: 100vh;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 56px 0 0 25px;
+            }
+            
+            // Menu Primary
+            &__menu {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                @include device(s){
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                &__item {
+                    list-style: none;
+                    // margin-bottom: 10px;
+
+                    @include device(s){
+                        margin: 15px 0;
+                    }
+
+                    a {
+                        color: #fff;
+                        font-weight: 700;
+                        display:inline-block;
+                        padding: 0 20px;
+                        text-decoration: none;
+                        line-height: 16px;                        
+                        @include type-2(16);
+
+                        &:hover {
+                            
+                            &::after {
+                                width: 100%;
+                                transition: width .5s;
+                                background-color: #E9204F;
+
+                            }
+                        }
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 0;
+                            height: 2px;
+                            background: #fff;
+                            transition: width .5s;
+                        }                        
+                        
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,132 @@
+#footer {
+    padding: 90px 0;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .footer-logo {
+        display: block;
+    }
+.footer-copy {
+    @include device(s){
+        margin-bottom: 40px;
+    }
+
+    .footer-rede-social {
+        list-style: none;
+        text-align: left;
+        margin-top: 30px;
+        li {
+            display: inline-block;
+            text-align: center;
+            margin: 0 5px;
+            padding: 12px;
+            background-image: -webkit-linear-gradient(-83deg, #a12299 0%, #d23a74 51%, #f96834 99%);
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;       
+            &:hover {
+                background: gray;
+                color: red;
+            }     
+            a {
+                
+                i {
+                    color: $white;
+                }
+            }
+        }
+
+    }
+
+    p {
+        margin-top: 30px;
+        color: $text-title;
+        text-align: left;
+    }
+}
+
+    .footer-links {
+        text-align: left;
+        @include device(s){
+            margin-bottom: 40px;
+        }
+        h4 {
+            font-weight: 600;
+            color: $title-section;
+            margin-bottom: 10px;
+            @include type-1(20);
+        }
+        ul {
+            list-style: none;
+            li {
+                padding: 2px 0;
+                a {
+                    color: $text-title;
+                    text-decoration: none;
+                    @include type-1(16);
+                }
+            }
+        }
+    }
+
+    .footer-help {
+        @include device(s){
+            margin-bottom: 40px;
+        }
+        h4 {
+            letter-spacing: 0.3px;
+            font-weight: 600;
+            color: $title-section;
+            margin-bottom: 10px;
+            @include type-1(20);
+        }
+
+        ul {
+            list-style: none;
+            li {
+                padding: 2px 0;
+                a {
+                    color: $text-title;
+                    text-decoration: none;
+                    @include type-1(16);
+                }
+            }
+        }
+    }
+
+    .footer-download {
+        @include device(s){
+            margin-bottom: 40px;
+        }
+        h4 {
+            letter-spacing: 0.3px;
+            font-weight: 600;
+            color: $title-section;
+            margin-bottom: 10px;
+            @include type-1(20);
+        }
+
+        ul {
+            list-style: none;
+            li {
+                padding: 2px 0;
+                a {
+                    color: $text-title;
+                    text-decoration: none;
+                    @include type-1(16);
+                }
+            }
+        }
+    }
+}
+
+.anime {
+    transition: .5s;
+}
+
+.anime-start {
+background: darkred;
+font-size: 60px;
+}
+

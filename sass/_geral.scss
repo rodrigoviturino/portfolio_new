@@ -1,0 +1,211 @@
+/* STYLE GERAL */
+
+body {
+    height: 2000px;
+    position: relative;
+    @include type-1(18px);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.ativo {
+    display: none !important;
+    transition: all 0.7s;
+}
+
+.modal_ativo {
+    display: block;
+}
+/* END STYLE GERAL */
+
+#tipo1 {
+    font-weight: 800;
+   @include type-1(80);
+   
+}
+
+#tipo2 {
+    font-weight: 800;
+    @include type-2(80);
+    
+}
+#tipo3 {
+    font-weight: 800;
+    @include type-3(80);
+    
+}
+#tipo4 {
+    font-weight: 800;
+    @include type-4(80);
+    
+}
+#tipo5 {
+    font-weight: 800;
+    @include type-5(80);
+    
+}
+
+/* EFEITOS MENU HEADER */ 
+
+.ativarMenu {
+    left: 110px !important;
+    z-index: 11;
+    background-color: #E9204F;
+    transition: all 0.7s;
+    width: 100% !important;
+
+    i {
+        transform: rotate(175deg);
+        transition: all 2.5s;
+        color: #4a4a4e;
+    }
+
+}
+
+
+
+/* MENU STICKY */
+.scrollHide {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+    background-color:rgba(233, 32, 79, 0.904) !important;
+    transition: all 1s;
+    padding: 7px 0 !important;
+
+    .header__main__wrapper__menu__item {
+        @include device(l){
+            margin: 0;
+        
+
+        a {
+            color: #fff;
+            font-weight: 700;
+            display:inline-block;
+            padding: 0 20px;
+            text-decoration: none;
+            line-height: 16px;                        
+            @include type-2(16);
+
+            &:hover {
+                
+                &::after {
+                    width: 100%;
+                    transition: width .5s;
+                    background-color: #fff;
+
+                }
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background: #fff;
+                transition: width .5s;
+            }                        
+            
+        }
+        }
+        
+    }
+
+    .header__main__logo {
+        a {
+            text-align: center;
+            color: #fff;
+            @include type-1(18);
+
+            .subTitle {
+                color: #fff;
+                font-weight: 400;
+            }
+        }
+    }
+
+}
+/* END MENU STICKY */
+
+/* end EFEITOS MENU HEADER */ 
+
+.js-tabcontent section{
+    display: none;
+}
+
+.js-tabcontent section.activeContent {
+    display: block;
+    animation: show .5s forwards;
+}
+
+.headerMenuFixed {
+    position: fixed;
+    width: 100%;
+    padding: 13px 0;
+    z-index: 11;
+    background-color: #3a3a3a;
+}
+
+
+/* SLICK */
+.slick-next {
+    right: -11px !important;
+}
+.slick-prev {
+    left: -11px !important;
+}
+
+// .slick-track {
+//     // width: 100% !important;
+//     @include device(s){
+//         width: unset;
+//     }
+// }
+.grid {
+    width: 100% !important;
+}
+/* end SLICK */
+
+.grid-item { padding: 10px; margin: 10px color
+    white;}
+// .grid-item--width2 { width: 50%; }
+
+#portfolio .filter {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+/**/
+.btn_fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 13;
+
+    div {
+        background-color: green;
+        border-radius: 5px;
+        transition: all 0.7s;
+
+        &:hover {
+            transition: all 0.7s;
+            background-color: white;
+
+            .fa-whatsapp {
+                color: green;
+            }    
+        }
+
+        .fa-whatsapp {
+            padding: 3px 5px;
+            font-size: 2.5rem;
+            color: white;
+        }
+    }
+}

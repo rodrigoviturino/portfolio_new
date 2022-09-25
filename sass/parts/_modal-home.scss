@@ -1,0 +1,171 @@
+.modal-home {
+    background-color: rgba(0, 0, 0, 0.836);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    width: 100%;
+    display: none;
+
+    &__wrapper {
+        width: 500px;
+        margin: 0 auto;
+        background-color: #2a2c47;
+        position: fixed;
+        top: 0;
+        z-index: 12;
+        padding: 0 40px;
+        top: 130px;
+        left: 480px;
+        transition: all 0.7s;
+
+        @include device(s){
+            width: 100%;
+            left: 0px;
+            margin: 0px;   
+            padding: 0;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            margin: 0 auto;
+            background-color: #e9204f;
+            width: 2px;
+            height: 30px;
+            // position: relative;
+            // top: -35px;
+        }
+
+    }
+
+    &__wrapper__header {
+        position: relative;
+        .block-title {
+            padding-bottom: 25px;
+
+            h2 {
+                text-align: center;
+                color: #fff;
+                padding: 10px 0;
+                @include type-1(20);
+            }
+    
+            p {
+                text-align: center;
+                color: #cacaca;
+                @include type-1(14);
+            }
+
+        }
+
+        .btn-close {
+            cursor: pointer;
+            padding: 12px;
+            position: absolute;
+            top: -20px;
+            right: -30px;
+            transition: all 0.7s;
+            background-color: #e9204f;
+
+            @include device(s){
+                top: -24px;
+                right: 20px;
+            }
+
+            &:hover {
+                transition: all 0.7s;
+                background-color:rgb(143, 16, 16);
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 11px;
+                right: 2px;
+                display: inline-block;
+                background-color: #fff;
+                width: 20px;
+                height: 2px;
+                transform: rotate(45deg);
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                top: 11px;
+                right: 2px;
+                background-color: #fff;
+                display: inline-block;
+                width: 20px;
+                height: 2px;
+                transform: rotate(130deg);
+            }
+        }
+
+    }
+
+    &__wrapper__body {
+        max-width: 300px;
+        margin: 0 auto;
+        padding-bottom: 25px;
+
+        form {
+            text-align: center;
+
+            input {
+                display: block;
+                margin: 15px auto;
+                // border: none;
+                width: 100%;
+                border: solid 0.5px #dbdbdb;
+                background-color: transparent;
+                color: #fff;
+                padding: 10px;
+            }
+
+            button {
+                display: block;
+                width: 50%;
+                color: #fff;
+                padding: 7px 0;
+                margin: 20px auto;
+                background-color: #e9204f;
+                border: solid 1px transparent;
+                cursor: pointer;
+                transition: all 0.7s;
+                @include type-1(18);
+
+                &:hover {
+                    transition: all 0.7s;
+                    color: #e9204f;
+                    background-color: #fff;
+                    border: solid 1px #e9204f;
+                }
+            }
+        }
+    }
+
+    &__wrapper__footer {
+        &::after {
+            content: '';
+            display: block;
+            background-color: #e9204f;
+            height: 5px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            left: 0px;
+        }
+    }
+
+}
+
+
+/* Active Modal Home */
+.activeModalHome{
+    display: block !important;
+    transition: all 0.7s;
+}
+/* end Active Modal Home */
