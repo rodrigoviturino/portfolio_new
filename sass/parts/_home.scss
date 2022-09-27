@@ -100,6 +100,10 @@
         padding: 0;
       }
 
+      img:first-child {
+        border-radius: 50%;
+      }
+
       .block-title {
         text-align: center;
         padding: 20px;
@@ -344,7 +348,7 @@
                     margin: 0 auto;
                     img {
                       height: 40px;
-                      width: 40px;
+                      width: auto;
                       margin: 0 auto;
                     }
 
@@ -1171,6 +1175,28 @@
   }
   /* end Titulo Principal */
 
+  /* Form Empresa Blog */
+  &__block-search {
+
+    form {
+      
+      input {
+        margin-bottom: 1rem;
+        border: solid 1px #f3f3f3;
+        border-radius: 6px;
+        padding: 0.75rem;
+        background: none;
+        color: #f3f3f3;
+        width: 100%;
+
+        &::placeholder {
+          color: #e9204f;
+        }
+      }
+    }
+  }
+  /* end Form Empresa Blog */
+
   /* Info */
   &__boxs {
     transition: all 0.5s;
@@ -1234,13 +1260,16 @@
           letter-spacing: 1.7px;
           @include type-5(18);
         }
-
-        .date {
-          color: rgb(66, 66, 66);
-          font-weight: 300;
-          padding-bottom: 15px;
-          text-transform: uppercase;
-          @include type-3(14);
+        
+        .quote {
+          margin: 0.5rem 0;
+          .date {
+            color: rgb(66, 66, 66);
+            font-weight: 300;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            @include type-3(14);
+          }
         }
 
         .description {
