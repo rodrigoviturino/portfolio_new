@@ -214,12 +214,9 @@ table {
  *    IE on Windows Phone and in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -274,12 +271,9 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -294,10 +288,8 @@ main {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Links
@@ -307,10 +299,8 @@ pre {
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
 a {
-  background-color: transparent;
-  /* 1 */
-  -webkit-text-decoration-skip: objects;
-  /* 2 */
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
 }
 
 /* Text-level semantics
@@ -320,12 +310,9 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -351,10 +338,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -442,14 +427,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -464,8 +445,7 @@ button {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -478,8 +458,7 @@ button,
 html [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
-  /* 2 */
+  -webkit-appearance: button; /* 2 */
 }
 
 button,
@@ -520,10 +499,8 @@ input {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -539,10 +516,8 @@ input {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
   /**
    * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
    */
@@ -556,10 +531,8 @@ input {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /**
@@ -576,18 +549,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  color: inherit;
-  /* 2 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  color: inherit; /* 2 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -595,10 +562,8 @@ legend {
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
 }
 
 /**
@@ -898,7 +863,7 @@ img {
   }
   .header__main .menu-close i {
     cursor: pointer;
-    color: #5d0a1d;
+    color: rgb(93, 10, 29);
   }
 }
 .header__main__logo {
@@ -1388,6 +1353,9 @@ img {
   margin: 0;
   padding: 0;
 }
+.faq-about-wrapper__tabs__section__tab01 img:first-child {
+  border-radius: 50%;
+}
 .faq-about-wrapper__tabs__section__tab01 .block-title {
   text-align: center;
   padding: 20px;
@@ -1610,7 +1578,7 @@ img {
 }
 .faq-about-wrapper__tabs__section__tab02 .block-skills__menu__wrapper__subMenu__item a img {
   height: 40px;
-  width: 40px;
+  width: auto;
   margin: 0 auto;
 }
 .faq-about-wrapper__tabs__section__tab02 .block-skills__menu__wrapper__subMenu__item a p {
@@ -1936,7 +1904,7 @@ img {
   font-weight: 300;
   letter-spacing: 1.3px;
   text-decoration: none;
-  background-color: #cebb18;
+  background-color: rgb(206, 187, 24);
   border-radius: 4px;
   padding: 7px 10px 5px;
   font-family: "Nunito", sans-serif;
@@ -1991,8 +1959,8 @@ img {
   font-weight: 300;
   letter-spacing: 1.3px;
   text-decoration: none;
-  background: #1e4c68;
-  background: linear-gradient(90deg, #1e4c68 21%, #e3752c 100%);
+  background: rgb(30, 76, 104);
+  background: linear-gradient(90deg, rgb(30, 76, 104) 21%, rgb(227, 117, 44) 100%);
   border-radius: 4px;
   padding: 7px 10px 5px;
   font-family: "Nunito", sans-serif;
@@ -2003,8 +1971,8 @@ img {
   font-weight: 300;
   letter-spacing: 1.3px;
   text-decoration: none;
-  background: #8ed5fa;
-  background: linear-gradient(90deg, #8ed5fa 0%, #1c78c0 100%);
+  background: rgb(142, 213, 250);
+  background: linear-gradient(90deg, rgb(142, 213, 250) 0%, rgb(28, 120, 192) 100%);
   border-radius: 4px;
   padding: 7px 10px 5px;
   font-family: "Nunito", sans-serif;
@@ -2015,8 +1983,8 @@ img {
   font-weight: 300;
   letter-spacing: 1.3px;
   text-decoration: none;
-  background: #dd0031;
-  background: linear-gradient(90deg, #dd0031 0%, #c3002f 100%);
+  background: rgb(221, 0, 49);
+  background: linear-gradient(90deg, rgb(221, 0, 49) 0%, rgb(195, 0, 47) 100%);
   border-radius: 4px;
   padding: 7px 10px 5px;
   font-family: "Nunito", sans-serif;
@@ -2281,6 +2249,8 @@ img {
   background-color: #222;
   /* Titulo Principal */
   /* end Titulo Principal */
+  /* Form Empresa Blog */
+  /* end Form Empresa Blog */
   /* Info */
   /* end Info */
   /* SLICK */
@@ -2350,6 +2320,18 @@ img {
     margin-top: 15px;
   }
 }
+.blog__block-search form input {
+  margin-bottom: 1rem;
+  border: solid 1px #f3f3f3;
+  border-radius: 6px;
+  padding: 0.75rem;
+  background: none;
+  color: #f3f3f3;
+  width: 100%;
+}
+.blog__block-search form input::placeholder {
+  color: #e9204f;
+}
 .blog__boxs {
   transition: all 0.5s;
 }
@@ -2408,8 +2390,11 @@ img {
   font-family: "Nunito", sans-serif;
   font-size: 1.125em;
 }
-.blog__boxs__item .info .date {
-  color: #424242;
+.blog__boxs__item .info .quote {
+  margin: 0.5rem 0;
+}
+.blog__boxs__item .info .quote .date {
+  color: rgb(66, 66, 66);
   font-weight: 300;
   padding-bottom: 15px;
   text-transform: uppercase;
@@ -2418,7 +2403,7 @@ img {
 }
 .blog__boxs__item .info .description {
   font-weight: 300;
-  color: #414141;
+  color: rgb(65, 65, 65);
   line-height: 23px;
   margin-bottom: 15px;
   font-family: "Lato", sans-serif;
@@ -3384,7 +3369,7 @@ span::before, span::after {
 }
 .modal-home__wrapper__header .btn-close:hover {
   transition: all 0.7s;
-  background-color: #8f1010;
+  background-color: rgb(143, 16, 16);
 }
 .modal-home__wrapper__header .btn-close::before {
   content: "";

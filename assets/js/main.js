@@ -222,7 +222,7 @@ $('.responsive').slick({
     let filters = document.querySelectorAll(".portfolio__filter__header .portfolio__filter__header__group__item");
     // filters[3].classList.add('filter-ativo');
 
-      filters[3].classList.add('filter-ativo');
+      // filters[3].classList.add('filter-ativo');
   
       function activeFilter(index) {
   
@@ -305,30 +305,109 @@ $('.filter li').on('click', function(e){
 
 
 // Portfolio isotope filter
-  $(window).load(function() {
-  var $container = $('.portfolio-items');
-  $container.isotope({
-      filter: '*',
-      animationOptions: {
-          duration: 750,
-          easing: 'linear',
-          queue: false
-      }
-  });
-  $('.cat a').click(function() {
-      $('.cat .active').removeClass('active');
-      $(this).addClass('active');
-      var selector = $(this).attr('data-filter');
-      $container.isotope({
-          filter: selector,
-          animationOptions: {
-              duration: 750,
-              easing: 'linear',
-              queue: false
-          }
-      });
-      return false;
-  });
+//   $(window).load(function() {
+//   var $container = $('.portfolio-items');
+//   $container.isotope({
+//       filter: '*',
+//       animationOptions: {
+//           duration: 750,
+//           easing: 'linear',
+//           queue: false
+//       }
+//   });
+//   $('.cat a').click(function() {
+//       $('.cat .active').removeClass('active');
+//       $(this).addClass('active');
+//       var selector = $(this).attr('data-filter');
+//       $container.isotope({
+//           filter: selector,
+//           animationOptions: {
+//               duration: 750,
+//               easing: 'linear',
+//               queue: false
+//           }
+//       });
+//       return false;
+//   });
 
-});
+// });
 /* end HOME - PORTFOLIO FILTER */
+
+/*** API BLOG ***/
+
+let token_api = '35b2588cc21b4e149abff0e47dd7603b';
+let search_input = document.querySelector('#blog-search');
+let search_api = 'Apple';
+
+  /*** Carregar Noticia Padrão ao Abrir o site */
+    window.addEventListener('load', (event) => {
+
+      fetch(`https://newsapi.org/v2/everything?q=${search_api}&apiKey=35b2588cc21b4e149abff0e47dd7603b`)
+      .then(function(response){
+        return response.json()
+      })
+      .then(function(data){
+        let blog_titulo = document.querySelectorAll('#blog .single-item .info .titulo');
+        let blog_data = document.querySelectorAll('#blog .single-item .info .quote .data');
+        let blog_autor = document.querySelectorAll('#blog .single-item .info .quote .autor');
+        let blog_descricao = document.querySelectorAll('#blog .single-item .info .description');
+        let blog_link = document.querySelectorAll('#blog .single-item .info .link');
+        let blog_image = document.querySelectorAll('#blog .single-item .img img');
+        
+        for (let i=0; i < data.articles.length; i++) {
+          const blog = data.articles;
+          console.log(blog[i])
+          
+          blog_titulo[i].innerHTML = blog[i].title;
+          
+          blog_autor[i].innerHTML = blog[i].author;
+          blog_data[i].innerHTML = blog[i].publishedAt;
+          
+          blog_descricao[i].innerHTML = blog[i].content.substr(0,120) + '...';
+          
+          blog_image[i].src = blog[i].urlToImage;
+          blog_link[i].href = blog[i].url;
+        }
+      });
+    });
+  /*** end Carregar Noticia Padrão ao Abrir o site */
+
+  /*** Input Noticia para usuario buscar */
+    search_input.addEventListener('submit', (event) => {
+      event.preventDefault();
+      let at =  event.target.querySelector('input').value;
+      search_api = at;
+
+      const api = fetch(`https://newsapi.org/v2/everything?q=${search_api}&apiKey=${token_api}`);
+      api.then(function(response){
+        return response.json()
+      })
+      .then(function(data){
+        let blog_titulo = document.querySelectorAll('#blog .single-item .info .titulo');
+        let blog_data = document.querySelectorAll('#blog .single-item .info .quote .data');
+        let blog_autor = document.querySelectorAll('#blog .single-item .info .quote .autor');
+        let blog_descricao = document.querySelectorAll('#blog .single-item .info .description');
+        let blog_link = document.querySelectorAll('#blog .single-item .info .link');
+        let blog_image = document.querySelectorAll('#blog .single-item .img img');
+        
+        
+        for (let i=0; i < data.articles.length; i++) {
+          const blog = data.articles;
+          console.log(blog[i])
+          
+          blog_titulo[i].innerHTML = blog[i].title;
+          
+          blog_autor[i].innerHTML = blog[i].author;
+          blog_data[i].innerHTML = blog[i].publishedAt;
+          
+          blog_descricao[i].innerHTML = blog[i].content.substr(0,120) + '...';
+          
+          blog_image[i].src = blog[i].urlToImage;
+          blog_link[i].href = blog[i].url;
+        }
+      });
+      
+    });
+  /*** end Input Noticia para usuario buscar */
+
+/*** END API BLOG ***/
